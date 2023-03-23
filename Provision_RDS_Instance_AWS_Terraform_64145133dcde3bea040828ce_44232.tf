@@ -1,0 +1,23 @@
+module "Provision_RDS_Instance_AWS_Terraform_64145133dcde3bea040828ce_44232" {
+  source                  = ""
+  identifier              = "mydb-rds"
+  storage                 = "10"
+  engine                  = "postgres"
+  engine_Version          = { "mysql" : "5.7.21", "postgres" : "9.6.8" }
+  instance_Class          = "db.t2.micro"
+  DB_Name                 = "mydb"
+  username                = "myuser"
+  region                  = "us-east-1"
+  CIDR_Blocks             = "10.0.3.0/24"
+  security_Group_Tag_Name = "rds_sg"
+  subnet_CIDR             = "10.0.4.0/24"
+  subnet1_CIDR            = "10.0.6.0/24"
+  Availability_Zone_1     = "us-east-1a"
+  Availability_Zone_2     = "us-east-1b"
+  password                = "Corestack@123"
+  DB_Subnet_Group_Name    = "dbsubnet1"
+  security_Group_Name     = "sgvpc1"
+  VPC_Id                  = "vpc-098987c"
+  subnet_Name_1           = "sub1"
+  subnet_Name_2           = "sub2"
+}
