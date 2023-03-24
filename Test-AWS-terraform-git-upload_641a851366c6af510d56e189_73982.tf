@@ -1,0 +1,26 @@
+module "Test-AWS-terraform-git-upload_641a851366c6af510d56e189_73982" {
+  source                             = "git::https://github.com/champakalatha-cs/corestacklab-templates/terraform/Provision_ECS_AWS_Terraform/.git"
+  AWS_Region                         = "us-east-2"
+  AZ_Count                           = 2
+  key_Name                           = "terra"
+  instance_Type                      = "t2.micro"
+  autoScaling_Group_Min_Size         = 2
+  autoScaling_Group_Max_Size         = 2
+  autoScaling_Group_Desired_Capacity = 2
+  admin_CIDR_Ingress                 = "20.0.0.0/32"
+  instance_Profile_Name              = "testprofile"
+  LB_Security_Group_Name             = "lbsecuritygroup1"
+  ECS_Security_Group_Name            = "ecssecuritygroup1"
+  ECS_Cluster_Name                   = "ecscluster1"
+  ECS_Task_Definition_Family_Name    = "ecstask1"
+  IAM_Role_Name                      = "ecsiamrole"
+  IAM_Role_Policy                    = "ecsiampolicy"
+  IAM_Role_APP_Instance_Name         = "ecsiamroleappinstance1"
+  IAM_Role_Instance_Policy           = "ecsiampolicyappinstance"
+  application_LB_Target_Group_Name   = "lbtargetgroupecs1"
+  application_LB_name                = "ecslb1"
+  ECS_Service_Name                   = "ecs1"
+  ECS_Cloudwatch_Log_Group_Name      = "ecswatchlog1"
+  APP_Cloudwatch_Log_Group_Name      = "ecsappwatchlog1"
+  autoscaling_Group_Name             = "ecsautoscalinggroup1"
+}
