@@ -1,0 +1,26 @@
+module "Provision_ECS_AWS_Terraform_648450021f3875e8838d3651_79865" {
+  source                             = ""
+  AWS_Region                         = "us-east-1"
+  AZ_Count                           = 2
+  key_Name                           = "terra"
+  instance_Type                      = "t2.micro"
+  autoScaling_Group_Min_Size         = 2
+  autoScaling_Group_Max_Size         = 2
+  autoScaling_Group_Desired_Capacity = 2
+  admin_CIDR_Ingress                 = "20.0.0.0/32"
+  instance_Profile_Name              = "sg-name1"
+  LB_Security_Group_Name             = "lb-sg"
+  ECS_Security_Group_Name            = "ecs-sg"
+  ECS_Cluster_Name                   = "ecs-cluster1"
+  ECS_Task_Definition_Family_Name    = "ecs-task-def1"
+  IAM_Role_Name                      = "ecs-iam-role2"
+  IAM_Role_Policy                    = "ecs-iam-role-policy"
+  IAM_Role_APP_Instance_Name         = "app-role"
+  IAM_Role_Instance_Policy           = "instance-iam"
+  application_LB_Target_Group_Name   = "app-lb-gn"
+  application_LB_name                = "app-lb"
+  ECS_Service_Name                   = "ecs-service-name"
+  ECS_Cloudwatch_Log_Group_Name      = "ecs-cloudwatch-log"
+  APP_Cloudwatch_Log_Group_Name      = "app-cloudwatch-log-group"
+  autoscaling_Group_Name             = "auto-scale-group"
+}
